@@ -9,7 +9,7 @@ const sizes = {
 
 const positions = {
     frist: 0,
-    second: 32
+    second: 20
 }
 
 export const Logo =({size, position})=> {
