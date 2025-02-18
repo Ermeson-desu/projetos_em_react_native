@@ -5,11 +5,18 @@ import logoImage from '../../../../assets/logo_cmd.png';
 const sizes = {
     small:135 ,
     large:293 
-
 }
 
-export const Logo =({size })=> {
+const positions = {
+    frist: 0,
+    second: 32
+}
+
+export const Logo =({size, position})=> {
     return(
-        <LogoImage source={logoImage} size={sizes[size||'large']} />
+        <LogoImage source={logoImage} 
+            size={sizes[size||'large']} 
+            marginLeft={positions[position||'frist']}
+        />
     )   
 };
