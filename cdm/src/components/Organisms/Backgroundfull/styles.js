@@ -1,14 +1,10 @@
 import styled from "styled-components/native";
+import { theme } from "../../../styles/theme";
 
 
 export const Backgroundfullcontainer = styled.View`
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
-`;
-
-export const BackgroundfullImage = styled.ImageBackground`
-    width: 100%;
-    height: 100%;
+    height: ${({theme})=> theme.metrics.px(0)}px;
 `;

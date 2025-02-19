@@ -8,6 +8,6 @@ export const ContainerCenter = styled.View`
     flex-direction: column;
     background-color: #d9d9d9;
     width: 90.5%;
-    height: 90%;
-    border-radius:${({theme})=>theme.metrics.px(9)}px;
+    height: ${({theme})=> theme.metrics.px(800)}px;
+    border-radius:${({theme})=>theme.metrics.px(18)}px;
 `;
