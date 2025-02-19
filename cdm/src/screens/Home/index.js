@@ -22,7 +22,7 @@ const FAKE_DATA_CHARACTERES =[
 export const Home = () => {
     return(
         <Container align='center' justify='center'>
-            <Backgroundfull/>
+            <Backgroundfull screen={'Home'}/>
             <HomeList title={'Mangas'} data={FAKE_DATA_CHARACTERES}/>
         </Container>
     )

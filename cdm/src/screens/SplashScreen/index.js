@@ -4,7 +4,7 @@ import {Logo,Background, Container} from '../../components'
 export const SplashScreen = ({navigation}) => {
   useEffect(()=> {
     setTimeout(() => {
-      navigation.navigate('Home')
+      navigation.navigate('SearchBad')
     }, 2000);
   },[navigation])
   return (
