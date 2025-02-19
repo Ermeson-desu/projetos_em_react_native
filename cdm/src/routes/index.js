@@ -1,7 +1,7 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import {SplashScreen, Home, SearchBad } from '../screens'
+import {SplashScreen, Home, SearchBad, ReadBad } from '../screens'
 
 export const Routes= ()=>{
     const Stack = createNativeStackNavigator();
@@ -21,6 +21,11 @@ export const Routes= ()=>{
                 <Stack.Screen 
                     name="SearchBad" 
                     component={SearchBad}
+                    options = {{headerShown: false}}
+                />
+                <Stack.Screen 
+                    name="ReadBad" 
+                    component={ReadBad}
                     options = {{headerShown: false}}
                 />
             </Stack.Navigator>
