@@ -25,4 +25,9 @@ Certifique-se de ter os seguintes requisitos instalados para rodar o projeto:
 Além disso, para usar **Styled Components**, é necessário instalar o pacote correspondente. Se você não tiver o Styled Components instalado, pode fazer isso com o seguinte comando:
 
 ```bash
+git clone https://github.com/Ermeson-desu/central-de-mangas.git
+cd central-de-mangas
+npm install
+npm start
+
 npm install styled-components
