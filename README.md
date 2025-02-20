@@ -16,6 +16,13 @@ O app tem uma interface simples e prática, permitindo ao usuário:
 - 📄 **Página do Mangá**: Exibe detalhes e capítulos de um mangá.  
 - 🚀 **Bottom Bar**: Navegação entre as telas principais do app.
 
+## Tecnologias Utilizadas
+- **React Native**
+- **Expo**
+- **React Navigation**
+- **Styled Components**
+- **zustand**
+
 ## Pré-requisitos
 Certifique-se de ter os seguintes requisitos instalados para rodar o projeto:  
 - **Node.js**: [Baixar Node.js](https://nodejs.org/)  
