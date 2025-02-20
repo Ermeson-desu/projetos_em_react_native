@@ -1,8 +1,10 @@
 import React from "react";
-import { CustomText } from "./styeld";
+import { CustomText } from "./styles";
 
 export const Text = ({children,color}) =>{
-    <CustomText color={color}>
-        {children}
-    </CustomText>
+    return (
+        <CustomText color={color}>
+            {children}
+        </CustomText>
+    )
 }

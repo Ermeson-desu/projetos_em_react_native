@@ -16,3 +16,5 @@ export const SearchBarStyle = styled.TextInput`
     padding: ${({theme})=>theme.metrics.px(15)}px;
     background-color: ${colors.white};
 `;
+
+
