@@ -1,6 +1,9 @@
 import React from "react";
 import { Container, HomeList,Backgroundfull} from '../../components';
 
+//Se não entender, não mexa 
+
+// Dados fictícios para exibição
 const FAKE_DATA_CHARACTERES =[
     {
         id: 0,
@@ -19,6 +22,11 @@ const FAKE_DATA_CHARACTERES =[
     }
 ]
 
+/**
+ * Tela Home
+ * Exibe uma lista de mangás recomendados ou mais recentes.
+ * @returns {JSX.Element} - Tela de início com uma lista de mangás.
+ */
 export const Home = () => {
     return(
         <Container align='center' justify='center'>

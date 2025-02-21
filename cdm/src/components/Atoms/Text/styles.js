@@ -1,7 +1,6 @@
 import styled from "styled-components/native";
-import { styles } from "../../../styles"
-import { JotiOne_400Regular } from "@expo-google-fonts/joti-one";
 
+// Define o estilo para o texto utilizando Styled Components
 export const CustomText = styled.Text`
     font-size: ${({theme})=>theme.metrics.px(24)}px;
     color: ${({color,theme})=> color||theme.colors.white};

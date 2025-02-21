@@ -1,11 +1,22 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
+// Container principal de navegação
+import { NavigationContainer } from "@react-navigation/native"; 
+ // Criador de stack navigator
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+// Importação das telas que serão usadas na navegação
 import {SplashScreen, Home, Search, ReadBad } from '../screens'
 
+
+
+// Função de configuração das rotas (navegação)
 export const Routes= ()=>{
+
+     // Criação do Stack Navigator que gerenciará a navegação entre as telas
     const Stack = createNativeStackNavigator();
+
     return(
+        // O NavigationContainer é o componente que envolve toda a navegação
+        //  e garante que ela funcione corretamente
         <NavigationContainer>
             <Stack.Navigator headerMode="none">
                 <Stack.Screen 

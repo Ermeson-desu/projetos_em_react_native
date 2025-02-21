@@ -5,6 +5,14 @@ import {CardsManga} from '../../Molecules';
 import { ListContainer } from "./styles"; 
 import {theme} from '../../../styles/theme';
 
+
+/**
+ * Componente HomeList
+ * Exibe uma lista de mangás com base nos dados fornecidos.
+ * @param {string} title - Título da lista de mangás.
+ * @param {Array} data - Array de dados dos mangás a serem exibidos.
+ * @returns {JSX.Element} - Componente que exibe a lista de mangás.
+ */
 export const HomeList = ({data,title}) =>{
     return(
         <ListContainer>

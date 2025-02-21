@@ -1,5 +1,10 @@
 import styled from "styled-components/native";
 
+/**
+ * Componente Container
+ * Utiliza Styled Components para criar um contêiner flexível com propriedades customizáveis.
+ * Pode ajustar direção, alinhamento, e dimensões.
+ */
 export const Container = styled.View`
     display: flex;
     flex-direction: ${({dir})=> dir || 'column'};
