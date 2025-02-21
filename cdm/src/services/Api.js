@@ -1,6 +1,7 @@
 // //Se você não entender, não mexa 
 // import axios from 'axios';
 
+<<<<<<< HEAD
 // // URL base da API
 // const API_URL = 'https://mangahook-api.vercel.app/mangalist';
 
@@ -28,3 +29,11 @@
 //             return {mangaList:[], metaData:{}}
 //         }
 //     }
+=======
+// URL base da API
+export const API = axios.create({
+
+    baseURL: 'https://mangahook-api.vercel.app/mangalist'
+
+});
+>>>>>>> 43131a87b291d6e025fef3c066d1fdd6522ff790

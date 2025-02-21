@@ -9,12 +9,15 @@ import {theme} from './src/styles'
 import { useState } from 'react'; 
 
 
+
+
 export default function App() {
   const [title, setTitle] = useState("")
 
+  //Função para buscar o mangá pelo nome
   async function buscarManga(){
     if(title.trim() === "") {
-      Alert.alert("Nome Inválido", "Por favor, digite um nome válido");
+      Alert.alert("Nome Inválido , Por favor, digite um nome válido");
       return
     }
       
@@ -22,7 +25,7 @@ export default function App() {
       const response = await Api.get(`/${title}`)
       setTitle(response.title)
     } catch (error) {
-      Alert.alert("Erro", "Não foi possível buscar os dados. Verifique o título do mangá buscado e tente novamente.")
+      Alert.alert("Erro: Não foi possível buscar os dados. Verifique o título do mangá buscado e tente novamente.")
     }
     }
     
