@@ -10,11 +10,13 @@ const screens = {
     SearchBad: 891
 }
 
-export const Backgroundfull = ({screen})=>{
+export const Backgroundfull = ({children,screen})=>{
     return (
         <Backgroundfullcontainer size={screens[screen||'SearchBad']}>
             <Background opacity={'second'} />
-            <WhiteCenter/>
+            <WhiteCenter>
+                {children}
+            </WhiteCenter>
             <Logo size={'small'} position={'second'}/>
         </Backgroundfullcontainer>
     )

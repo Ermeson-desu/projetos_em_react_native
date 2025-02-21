@@ -5,7 +5,7 @@ import { ThemeProvider } from 'styled-components';
 import {useFonts,JosefinSans_400Regular} from '@expo-google-fonts/josefin-sans'
 import {JotiOne_400Regular} from '@expo-google-fonts/joti-one'
 import {theme} from './src/styles'
-import Api from '@/src/services/Api'
+// import Api from '@/src/services/Api'
 import { useState } from 'react'; 
 
 

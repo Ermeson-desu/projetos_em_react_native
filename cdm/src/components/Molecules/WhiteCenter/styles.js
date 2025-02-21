@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { colors } from "../../../styles/colors";
 
-export const ContainerCenter = styled.ScrollView`
+export const ContainerCenter = styled.View`
     position: absolute;
     margin-left:${({theme})=>theme.metrics.px(19)}px ;
     margin-top: 23%;
