@@ -1,4 +1,4 @@
-import { Icons, Container} from '../../components';
+import { Icons, Container} from '../../../components';
 import { StyledIconsButton } from './styles';
 
 

@@ -2,4 +2,4 @@
 export * from './CardsManga';
 export * from './WhiteCenter';
 export * from './SearchBar';
-export * from './IconsButtons'
+export * from './IconsButton';

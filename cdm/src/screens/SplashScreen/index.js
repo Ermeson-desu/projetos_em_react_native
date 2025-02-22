@@ -18,7 +18,7 @@ export const SplashScreen = ({navigation}) => {
 
      // A função setTimeout define um atraso antes de navegar para a tela "Search"
     setTimeout(() => {
-      navigation.navigate('Search')
+      navigation.navigate('Home')
     }, 2000);
   },[navigation])
 
