@@ -7,8 +7,8 @@ export const ContainerCenter = styled.View`
     margin-top: 23%;
     display: flex;
     flex-direction: column;
-    background-color: ${colors.light_grey};
+    background-color: ${colors.light_gray};
     width: 90.5%;
-    height: ${({theme})=> theme.metrics.px(800)}px;
+    height: ${({theme})=> theme.metrics.px(900)}px;
     border-radius:${({theme})=>theme.metrics.px(18)}px;
 `;
