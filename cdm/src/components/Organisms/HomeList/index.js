@@ -16,7 +16,7 @@ import {theme} from '../../../styles/';
 export const HomeList = ({data,title}) =>{
     return(
         <ListContainer>
-            <Text color={theme.colors.dark_gray} marginLeft={16} marginBottom={14}>{title}</Text>
+            <Text color={theme.colors.dark_gray} marginLeft={16} marginBottom={13}>{title}</Text>
             <FlatList
                 horizontal
                 data = {data}

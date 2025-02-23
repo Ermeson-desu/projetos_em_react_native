@@ -3,9 +3,9 @@ import { Alert } from "react-native";
 
 export const fetchMangas = async () => {
     try {
-        // Buscar os 5 mangás mais recentes
+        // Buscar os 10 mangás mais recentes
         const response = await api.get('/manga', {
-            params: { limit: 5, order: { latestUploadedChapter: "desc" } }
+            params: { limit: 10, order: { latestUploadedChapter: "desc" } }
         });
 
         const mangas = response.data.data; // Pegando os dados retornados

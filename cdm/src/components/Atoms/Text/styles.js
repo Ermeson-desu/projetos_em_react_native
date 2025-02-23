@@ -7,6 +7,6 @@ export const CustomText = styled.Text`
     color: ${({color,theme})=> color||theme.colors.black};
     margin-top:  ${({marginTop,theme})=>theme.metrics.px(marginTop) || theme.metrics.px(12)}px;
     margin-Left: ${({marginLeft,theme})=>theme.metrics.px(marginLeft)||theme.metrics.px(0)}px;
-    margin-Bottom:${({marginBotton,theme})=>theme.metrics.px(marginBotton)||theme.metrics.px(0)}px;
+    margin-Bottom:${({marginBotton,theme})=>theme.metrics.px(marginBotton)||theme.metrics.px(13)}px;
     font-family: 'JotiOne_400Regular';
 `;

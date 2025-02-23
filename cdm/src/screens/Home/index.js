@@ -24,6 +24,7 @@ export const Home = () => {
         <Container align='center' justify='center'>
             <Backgroundfull>
                 <HomeList title={'Mangás recentes'} data={manga}/>
+                
             </Backgroundfull>
         </Container>
     )
