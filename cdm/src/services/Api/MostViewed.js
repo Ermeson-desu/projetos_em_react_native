@@ -21,6 +21,9 @@ export const fetchMostVieweds = async () => {
         // Buscar capa de cada mangá
         const mangasWithCovers = await Promise.all(mangas.map(async (manga) => {
             const mangaId = manga.id;
+            
+            //Busca o título do manga
+            const title = manga.attributes.title['ja-ro']|| manga.attributes.title.en|| 'Título desconhecido'
 
             // Buscar capa do mangá
             const coverResponse = await api.get(`/cover`, {
@@ -34,6 +37,7 @@ export const fetchMostVieweds = async () => {
 
             return {
                 id: mangaId,
+                title:title,
                 image_url: coverUrl
             };
         }));

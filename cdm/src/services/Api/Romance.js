@@ -25,6 +25,8 @@ export const fetchRomance = async () => {
         const mangasWithCovers = await Promise.all(mangas.map(async (manga) => {
             const mangaId = manga.id;
 
+            //Buscar nome do mangá
+            const title = manga.attributes.title['ja-ro'] || manga.attributes.title.en || 'título desconhecido';
             // Buscar capa do mangá
             const coverResponse = await api.get(`/cover`, {
                 params: { 'manga[]': mangaId }
@@ -37,6 +39,7 @@ export const fetchRomance = async () => {
 
             return {
                 id: mangaId,
+                title:title,
                 image_url: coverUrl
             };
         }));

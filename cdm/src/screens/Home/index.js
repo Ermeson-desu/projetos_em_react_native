@@ -6,7 +6,7 @@ import { fetchMostVieweds} from '../../services/Api/MostViewed';
 import { fetchIndications } from "../../services/Api/Indications";
 import { fetchRomance } from "../../services/Api/Romance";
 import { fetchIsekais } from "../../services/Api/Isekais";
-
+import { BottomBar } from "../../components";
 //Se não entender, não mexa 
 
 /**
@@ -64,6 +64,7 @@ export const Home = () => {
                         <MangaList title={'Isekais'} data={isekais}/>
                     </HomeList>
                 </Backgroundfull>
+                <BottomBar/>
             </Container>
 
         </KeyboardAvoidingView>

@@ -2,7 +2,7 @@ import React from "react";
 import { FlatList } from "react-native";
 import { Text } from "../../Atoms";
 import {CardsManga} from '../../Molecules';
-import { ListContainer } from "./styles"; 
+import { ListContainer,MangaContainer } from "./styles"; 
 import {theme} from '../../../styles';
 
 
@@ -20,7 +20,12 @@ export const MangaList = ({data,title}) =>{
             <FlatList
                 horizontal
                 data = {data}
-                renderItem = {({item}) => <CardsManga item={item}/>}
+                renderItem = {({item}) =>
+                    <MangaContainer>
+                        <CardsManga item={item}/>
+                        <Text size={15} color={theme.colors.blue} marginLeft={15} marginBottom={0}>{item.title}</Text>
+                    </MangaContainer>
+                }
                 keyExtractor = {(item)=> item.id}
                 showsVerticalScrollIndicator={false}
                 contentContainerStyle={{

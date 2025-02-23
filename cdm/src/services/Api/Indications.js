@@ -22,6 +22,10 @@ export const fetchIndications = async () => {
         const mangasWithCovers = await Promise.all(mangas.map(async (manga) => {
             const mangaId = manga.id;
 
+            // Pega o título em romaji (ja-ro) ou, se não existir, em inglês (en)
+            const title = manga.attributes.title["ja-ro"] || manga.attributes.title.en || "Título desconhecido";
+
+
             // Buscar capa do mangá
             const coverResponse = await api.get(`/cover`, {
                 params: { 'manga[]': mangaId }
@@ -34,6 +38,7 @@ export const fetchIndications = async () => {
 
             return {
                 id: mangaId,
+                title: title,
                 image_url: coverUrl
             };
         }));
