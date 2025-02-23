@@ -8,8 +8,7 @@ export const CardContainer = styled.TouchableOpacity`
     margin-left:${({theme})=>theme.metrics.px(10)}px;
     margin-right:${({theme})=>theme.metrics.px(10)}px;
 `;
-
-export const CardImage = styled.ImageBackground`
+export const CardImage = styled.Image`
     width:100%;
     height:100%;
 `;

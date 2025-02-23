@@ -3,7 +3,7 @@ import { FlatList } from "react-native";
 import { Text } from "../../Atoms";
 import {CardsManga} from '../../Molecules';
 import { ListContainer } from "./styles"; 
-import {theme} from '../../../styles/';
+import {theme} from '../../../styles';
 
 
 /**
@@ -13,7 +13,7 @@ import {theme} from '../../../styles/';
  * @param {Array} data - Array de dados dos mangás a serem exibidos.
  * @returns {JSX.Element} - Componente que exibe a lista de mangás.
  */
-export const HomeList = ({data,title}) =>{
+export const MangaList = ({data,title}) =>{
     return(
         <ListContainer>
             <Text color={theme.colors.dark_gray} marginLeft={16} marginBottom={13}>{title}</Text>
@@ -22,6 +22,7 @@ export const HomeList = ({data,title}) =>{
                 data = {data}
                 renderItem = {({item}) => <CardsManga item={item}/>}
                 keyExtractor = {(item)=> item.id}
+                showsVerticalScrollIndicator={false}
                 contentContainerStyle={{
                     paddingTop: theme.metrics.px(3),
                     paddingLeft: theme.metrics.px(7)

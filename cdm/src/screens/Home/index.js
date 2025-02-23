@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
-import { Container, HomeList,Backgroundfull} from '../../components';
-import { fetchMangas } from "../../services/Api/SearchService";
+import { Container, MangaList,HomeList,Backgroundfull} from '../../components';
+import { fetchMangas } from "../../services/Api/RecentManga";
+import {fetchMostViewdes as fetchMostVieweds} from '../../services/Api/MostViewed'
 //Se não entender, não mexa 
 
 /**
@@ -9,22 +10,32 @@ import { fetchMangas } from "../../services/Api/SearchService";
  * @returns - Tela de início com uma lista de mangás.
  */
 export const Home = () => {
-    const [manga, setManga] = useState([])
+    const [mangaRecent, setMangaRecent] = useState([])
+    const [mostViewed, setMostViewed] = useState([])
 
     useEffect(()=>{
-        const loadMangas = async () =>{
-            const fetchedMangas = await fetchMangas()
-            setManga(fetchedMangas)
+        const loadMangasRecents = async () =>{
+            const fetchedMangasRecents = await fetchMangas()
+            setMangaRecent(fetchedMangasRecents)
         }
-
-        loadMangas()
+        const loadMostVieweds = async ()=>{
+            const fetchedMostViewed = await fetchMostVieweds()
+            setMostViewed(fetchedMostViewed)
+        }
+        loadMangasRecents()
+        loadMostVieweds()
     }, [])
 
     return(
         <Container align='center' justify='center'>
             <Backgroundfull>
-                <HomeList title={'Mangás recentes'} data={manga}/>
-                
+                <HomeList contentContainerStyle={{ flexGrow: 1 ,paddingBottom: 15}}>
+                    <MangaList title={'Mangás recentes'} data={mangaRecent}/>
+                    <MangaList title={'Mais vistos'} data={mostViewed}/>
+                    <MangaList title={'Indicações'} data={mangaRecent}/>
+                    <MangaList title={'Romances'} data={mangaRecent}/>
+                    <MangaList title={'Isekais'} data={mangaRecent}/>
+                </HomeList>
             </Backgroundfull>
         </Container>
     )

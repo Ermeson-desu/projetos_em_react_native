@@ -1,4 +1,5 @@
 //exporte todos os componentes organismos , que você criar, aqui
-export * from './HomeList';
+export * from './MangaList';
 export * from './Backgroundfull';
 export * from './BottomBar';
+export * from './HomeList';
