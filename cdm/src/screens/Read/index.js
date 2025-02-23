@@ -1,7 +1,13 @@
-import { Backgroundfull } from "../../components";
+import { Backgroundfull, BottomBar, Container } from "../../components";
 
 export const Read = () => {
   return (
-    <Backgroundfull/>
+    <Container align='center' justify='center'>
+      <Backgroundfull>
+  
+      </Backgroundfull>
+      <BottomBar/>
+
+    </Container>
   );
 };
