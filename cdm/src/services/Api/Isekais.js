@@ -1,12 +1,15 @@
 import api from "./Api"; 
 import { Alert } from "react-native";
 
-export const fetchMostVieweds = async () => {
+export const fetchIsekais = async () => {
     try {
-        // Buscar os 10 mangás mais vistos
+        // Buscar os 10 isekais mais relevantes
         const response = await api.get('/manga', {
-            params: { limit: 10, order: { followedCount: 'desc' },
+            params: { limit: 10, order:{ relevance: 'desc' },
                 contentRating: ['safe', 'suggestive'], 
+                includedTags: [
+                    'ace04997-f6bd-436e-b261-779182193d3d'  // Isekai
+                ],
                 excludedTags: [
                         '734c7ec5-8489-46a4-8b5d-3eecd50c45cb',//hentai 
                         '97893a4c-12af-4dac-b6be-0c717c532b0d',// ecchi 

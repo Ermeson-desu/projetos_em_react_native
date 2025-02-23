@@ -1,12 +1,15 @@
 import api from "./Api"; 
 import { Alert } from "react-native";
 
-export const fetchMostVieweds = async () => {
+export const fetchRomance = async () => {
     try {
-        // Buscar os 10 mangás mais vistos
+        // Buscar os 10 mangás mais recentes
         const response = await api.get('/manga', {
-            params: { limit: 10, order: { followedCount: 'desc' },
+            params: { limit: 10, order:{ relevance: 'desc' },
                 contentRating: ['safe', 'suggestive'], 
+                includedTags: [
+                    '423e2eae-a7a2-4a8b-ac03-a8351462d71d', // Romance
+                ],
                 excludedTags: [
                         '734c7ec5-8489-46a4-8b5d-3eecd50c45cb',//hentai 
                         '97893a4c-12af-4dac-b6be-0c717c532b0d',// ecchi 
