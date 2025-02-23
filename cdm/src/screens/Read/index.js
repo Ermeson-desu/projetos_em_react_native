@@ -1,6 +1,6 @@
 import { Backgroundfull } from "../../components";
 
-export const ReadBad = () => {
+export const Read = () => {
   return (
     <Backgroundfull/>
   );
