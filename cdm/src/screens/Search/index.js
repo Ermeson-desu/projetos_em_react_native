@@ -1,15 +1,17 @@
 import React from 'react';
-import { Container, Backgroundfull, Text, Icons, SearchBar, IconsButton} from '../../components';
+import { Container, Backgroundfull, SearchBar, BottomBar} from '../../components';
 import { colors } from '../../styles/colors';
- 
+import { useNavigation } from '@react-navigation/native';
 
 export const Search = () => {
+    const navigation = useNavigation(); 
+    
     return(
         <Container align='center' justify='center'>
             <Backgroundfull>
                 <SearchBar/>
-                <IconsButton name={'home'} size={25} color={'blue'}/>
             </Backgroundfull>
+            <BottomBar navigation={navigation} />
         </Container>
     )
 }

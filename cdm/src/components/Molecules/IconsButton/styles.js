@@ -1,7 +1,6 @@
 import styled from "styled-components/native";
+import { colors } from "../../../styles/colors";
 
 export const StyledIconsButton = styled.TouchableOpacity`
-    width: 50px;
-    height: 25px;
-    border: 1px solid black; 
-`;
+
+`
