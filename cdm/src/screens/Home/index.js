@@ -7,6 +7,7 @@ import { fetchIndications } from "../../services/Api/Indications";
 import { fetchRomance } from "../../services/Api/Romance";
 import { fetchIsekais } from "../../services/Api/Isekais";
 import { BottomBar } from "../../components";
+import { useNavigation } from "@react-navigation/native";
 //Se não entender, não mexa 
 
 /**
@@ -15,6 +16,7 @@ import { BottomBar } from "../../components";
  * @returns - Tela de início com uma lista de mangás.
  */
 export const Home = () => {
+    const navigation = useNavigation()
     const [mangaRecent, setMangaRecent] = useState([])
     const [mostViewed, setMostViewed] = useState([])
     const [indications, setIndications] = useState([])
@@ -64,7 +66,7 @@ export const Home = () => {
                         <MangaList title={'Isekais'} data={isekais}/>
                     </HomeList>
                 </Backgroundfull>
-                <BottomBar/>
+                <BottomBar navigation={navigation}/>
             </Container>
 
         </KeyboardAvoidingView>

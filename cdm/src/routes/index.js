@@ -4,7 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
  // Criador de stack navigator
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 // Importação das telas que serão usadas na navegação
-import {SplashScreen, Home, Search, ReadBad } from '../screens'
+import {SplashScreen, Home, Search, ReadBad} from '../screens'
 
 
 
@@ -35,8 +35,8 @@ export const Routes= ()=>{
                     options = {{headerShown: false}}
                 />
                 <Stack.Screen 
-                    name="ReadBad" 
-                    component={ReadBad}
+                    name="Read" 
+                    component={Read}
                     options = {{headerShown: false}}
                 />
             </Stack.Navigator>

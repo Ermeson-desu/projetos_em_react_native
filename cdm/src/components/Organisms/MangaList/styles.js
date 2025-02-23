@@ -10,6 +10,7 @@ export const ListContainer = styled.View`
 `;
 
 export const MangaContainer = styled.View`
-    width: 130px;
+    width: ${({theme})=>theme.metrics.px(130)}px;
+    height:${({theme})=>theme.metrics.px(205)}px;
     align-items: center;
 `;

@@ -3,6 +3,7 @@ import { colors } from "../../../styles/colors";
 
 export const ContainerCenter = styled.View`
     position: absolute;
+    overflow:hidden;
     margin-left:${({theme})=>theme.metrics.px(19)}px ;
     margin-top: 23%;
     display: flex;
