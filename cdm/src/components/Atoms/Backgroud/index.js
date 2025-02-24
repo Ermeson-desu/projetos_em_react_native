@@ -15,10 +15,10 @@ const opacitys = {
  * @param {string} opacity - Controla a opacidade da imagem de fundo (pode ser 'first' ou 'second').
  * @returns {JSX.Element} - Retorna o componente de imagem de fundo.
  */
-export const Background=({opacity})=>{
+export const Background=({opacity, src, size})=>{
     return(
         <BackgroundImage 
-            source={Backgroundapp}  // Fonte da imagem de fundo
+            source={src||Backgroundapp}  // Fonte da imagem de fundo
             opacity = {opacitys[opacity||'first']} // Aplica a opacidade
         />
     )
