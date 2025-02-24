@@ -1,6 +1,6 @@
 import styled from "styled-components/native";
 
-export const Backgroundfullcontainer = styled.ScrollView.attrs({
+export const Backgroundfullcontainer = styled.View.attrs({
     keyboardShouldPersistTaps: "handled",
     contentContainerStyle: { flexGrow: 1 },
 })`

@@ -13,9 +13,9 @@ import {theme} from '../../../styles';
  * @param {Array} data - Array de dados dos mangás a serem exibidos.
  * @returns {JSX.Element} - Componente que exibe a lista de mangás.
  */
-export const MangaList = ({data,title}) =>{
+export const MangaList = ({data,title, height='20%'}) =>{
     return(
-        <ListContainer>
+        <ListContainer style={{ height }}>
             <Text color={theme.colors.dark_gray} marginLeft={16} marginBottom={13}>{title}</Text>
             <FlatList
                 horizontal

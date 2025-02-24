@@ -36,8 +36,13 @@ export const searchManga = async (query) => {
                 ? `https://uploads.mangadex.org/covers/${mangaId}/${coverFileName}`
                 : "https://via.placeholder.com/200x300?text=Sem+Capa";
 
-            return MangaSearch;
+            return {
+                id: mangaId,
+                title:title,
+                image_url: coverUrl
+            };
         }))
+        return MangaSearch;
 
     } catch (error) {
         Alert.alert('Erro ao buscar mangá:', error.message);
