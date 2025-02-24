@@ -6,14 +6,14 @@ export const Phantom = ({
     marginLeft, 
     marginRight, 
     marginTop, 
-    marginBotton
+    marginBotton,
 
 }) => {
     return (
         <Img_container>
             <ImageStyle 
                 source={source} 
-                size={size} 
+                size={size}
                 marginBotton={marginBotton}
                 marginLeft={marginLeft}
                 marginRight={marginRight}
