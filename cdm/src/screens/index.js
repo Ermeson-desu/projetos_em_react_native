@@ -3,3 +3,4 @@ export * from './SplashScreen';
 export * from './Home';
 export * from './Search';
 export * from './Read';
+export * from './Page';
