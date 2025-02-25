@@ -5,8 +5,8 @@ export const PageMangaStyle = styled.View`
     
     display:flex;
     align-items:center;
-    height:${({height,theme})=>theme.metrics.px(height*2.3)}px;
-    width:${({width, theme})=> theme.metrics.px(width*2.3)}px;
+    height:${({height,theme})=>theme.metrics.px(height)}px;
+    width:${({width, theme})=> theme.metrics.px(width)}px;
 `;
 
 export const ImgStyle = styled.Image`
