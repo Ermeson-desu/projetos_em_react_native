@@ -38,7 +38,7 @@ export const PageList = () =>{
 
             <FlatList
             data={pages}
-            keyExtractor={(item)=>item.id}
+            keyExtractor={(item,index)=>`${item}-${index}`}
             renderItem={({item}) =>
                     <MangaContainer height={height_page}>
                         <PageManga item={item}/>
