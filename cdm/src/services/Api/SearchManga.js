@@ -6,7 +6,7 @@ export const searchManga = async (query) => {
         const response = await api.get('/manga', {
             params: { 
                 title: query, // Filtra pelo título do mangá
-                limit: 5, // Retorna apenas um resultado
+                limit: 10, // Retorna apenas um resultado
                 contentRating: ['safe', 'suggestive'], 
                 excludedTags: [
                     '734c7ec5-8489-46a4-8b5d-3eecd50c45cb', // Hentai 

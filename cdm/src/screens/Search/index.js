@@ -23,7 +23,7 @@ export const Search = () => {
             <Backgroundfull>
                 <SearchBar onSearch={handleSearch} />
                 <HomeList contentContainerStyle={{ flexGrow: 1 }}>
-                    <MangaList data={search} height="52%" />
+                    <MangaList data={search} height="52%" horizontal={false}/>
                 </HomeList>
             </Backgroundfull>
             <BottomBar navigation={navigation} />
