@@ -2,7 +2,7 @@ import React from "react";
 import { FlatList } from "react-native";
 import { Text } from "../../Atoms";
 import {CardsManga} from '../../Molecules';
-import { ListContainer,MangaContainer } from "./styles"; 
+import { ListContainer, MangaContainer } from "./styles"; 
 import {theme} from '../../../styles';
 
 
