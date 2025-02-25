@@ -10,17 +10,18 @@ export const Read = () => {
     <Container align='center' justify='center'>
       <Backgroundfull>
           <Phantom source={cards} 
-            size={200}
-            marginLeft={10}
+            size={170}
+            marginTop={20}
+            marginLeft={0}
           />
 
-          <Text marginLeft={170} 
+          <Text marginLeft={165} 
           marginBottom={-5}>
           Ops..
           </Text>
           <Text 
           marginLeft={29} 
-          size={20}
+          size={18}
 
           >
           Parece que não tem nada por aqui.
