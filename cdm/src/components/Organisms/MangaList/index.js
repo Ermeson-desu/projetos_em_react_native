@@ -5,6 +5,7 @@ import {CardsManga} from '../../Molecules';
 import { ListContainer, MangaContainer } from "./styles"; 
 import {theme} from '../../../styles';
 
+
 /**
  * Componente HomeList
  * Exibe uma lista de mangás com base nos dados fornecidos.
@@ -13,29 +14,27 @@ import {theme} from '../../../styles';
  * @returns {JSX.Element} - Componente que exibe a lista de mangás.
  */
 export const MangaList = ({
+    onPress,
     data,
     title, 
     height, 
     width,
     horizontal=true, 
     numColumns='?1 :3',
-    onReadManga,
 
 }) =>{
     return(
         <ListContainer style={{ height}}>
             <Text color={theme.colors.dark_gray} marginLeft={16} marginBottom={13}>{title}</Text>
             <FlatList
-                data={data}
-                renderItem={({ item }) => (
+                data = {data}
+                renderItem = {({item}) =>
                     <MangaContainer width={width}>
-                        <CardsManga item={item}  onPress={() => onReadManga(item.id)} />
-                        <Text size={15} color={theme.colors.blue} marginLeft={15} marginBottom={0}>
-                            {item.title}
-                        </Text>
+                        <CardsManga item={item} onPress={() => onPress(item.id)}/>
+                        <Text size={15} color={theme.colors.blue} marginLeft={15} marginBottom={0}>{item.title}</Text>
                     </MangaContainer>
-                )}
-                keyExtractor={(item) => item.id}
+                }
+                keyExtractor = {(item)=> item.id}
                 horizontal={horizontal}
                 numColumns={horizontal ? 1 : 3}
                 showsVerticalScrollIndicator={false}

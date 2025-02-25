@@ -22,11 +22,6 @@ export const Home = () => {
     const [indications, setIndications] = useState([])
     const [romance, setRomance] = useState([])
     const [isekais, setIsekais] = useState([])
-    const [readMangas, setReadMangas] = useState([]);
-
-    const handleReadManga = (mangaId) => {
-        setReadMangas((prev) => [...new Set([...prev, mangaId])]);
-    };
 
     useEffect(()=>{
         const loadIsekais = async () => {
@@ -64,17 +59,36 @@ export const Home = () => {
             <Container align='center' justify='center'>
                 <Backgroundfull>
                     <HomeList contentContainerStyle={{ flexGrow: 1 ,paddingBottom: 15}}>
-                        <MangaList title={'Mangás recentes'} data={mangaRecent} onReadManga={handleReadManga} />
-                        <MangaList title={'Mais vistos'} data={mostViewed} onReadManga={handleReadManga} />
-                        <MangaList title={'Indicações'} data={indications} onReadManga={handleReadManga} />
-                        <MangaList title={'Romances'} data={romance} onReadManga={handleReadManga} />
-                        <MangaList title={'Isekais'} data={isekais} onReadManga={handleReadManga} />
+                        <MangaList 
+                            title={'Mangás recentes'} 
+                            data={mangaRecent}
+                            onPress={(mangaId)=>navigation.navigate('Page',{mangaId})}
+                            />
+                        <MangaList 
+                            title={'Mais vistos'} 
+                            data={mostViewed}
+                            onPress={(mangaId)=>navigation.navigate('Page',{mangaId})}
+                            />
+                        <MangaList 
+                            title={'Indicações'} 
+                            data={indications}
+                            onPress={(mangaId)=>navigation.navigate('Page',{mangaId})}
+                            />
+                        <MangaList 
+                            title={'Romances'} 
+                            data={romance}
+                            onPress={(mangaId)=>navigation.navigate('Page',{mangaId})}
+                            />
+                        <MangaList 
+                            title={'Isekais'} 
+                            data={isekais}
+                            onPress={(mangaId)=> navigation.navigate('Page',{mangaId})}
+                            />
                     </HomeList>
                 </Backgroundfull>
                 <BottomBar navigation={navigation}/>
             </Container>
 
         </KeyboardAvoidingView>
-
     )
 }

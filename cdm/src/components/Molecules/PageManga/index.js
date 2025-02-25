@@ -16,11 +16,11 @@ export const PageManga = ({item}) =>{
                 console.error("Erro ao carregar imagem:", error);
             });
         }
-    }, [item.image_url]);
+    }, [item]);
 
     return(
         <PageMangaStyle height={imgSize.height} width={imgSize.width}>
-            <ImgStyle source = {{uri:item.image_url}} resizeMode='response'/>
+            <ImgStyle source = {{uri:item}} />
         </PageMangaStyle>
     )
 }
