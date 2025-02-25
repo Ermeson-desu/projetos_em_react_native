@@ -1,6 +1,13 @@
 import React, { useState } from "react";
-import { FlatList, Text, Alert } from 'react-native'; // Combine as importações
-import { Container, Backgroundfull, BottomBar, SearchBar, HomeList, MangaList } from '../../components';
+import { Alert } from 'react-native'; // Combine as importações
+import { 
+    Container, 
+    Backgroundfull, 
+    BottomBar, 
+    SearchBar, 
+    SearchList, 
+    MangaList 
+} from '../../components';
 import { useNavigation } from '@react-navigation/native';
 import { searchManga } from '../../services/Api/SearchManga'; 
 
@@ -22,9 +29,9 @@ export const Search = () => {
         <Container align='center' justify='center'>
             <Backgroundfull>
                 <SearchBar onSearch={handleSearch} />
-                <HomeList contentContainerStyle={{ flexGrow: 1 }}>
-                    <MangaList data={search} height="52%" horizontal={false}/>
-                </HomeList>
+                <SearchList contentContainerStyle={{ flexGrow: 1 }}>
+                    <MangaList data={search} height="54.7%" width={120} horizontal={false}/>
+                </SearchList>
             </Backgroundfull>
             <BottomBar navigation={navigation} />
         </Container>

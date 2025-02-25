@@ -4,3 +4,4 @@ export * from './Backgroundfull';
 export * from './BottomBar';
 export * from './HomeList';
 export * from './PageList';
+export * from './SearchList';
