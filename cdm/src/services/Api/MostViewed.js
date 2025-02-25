@@ -6,6 +6,7 @@ export const fetchMostVieweds = async () => {
         // Buscar os 10 mangás mais vistos
         const response = await api.get('/manga', {
             params: { limit: 10, order: { followedCount: 'desc' },
+                availableTranslatedLanguage: ['pt-br'],
                 contentRating: ['safe', 'suggestive'], 
                 excludedTags: [
                         '734c7ec5-8489-46a4-8b5d-3eecd50c45cb',//hentai 

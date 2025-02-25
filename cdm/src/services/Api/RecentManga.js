@@ -6,6 +6,7 @@ export const fetchMangas = async () => {
         // Buscar os 10 mangás mais recentes
         const response = await api.get('/manga', {
             params: { limit: 10, order: { latestUploadedChapter: "desc" },
+                availableTranslatedLanguage: ['pt-br'],
                 contentRating: ['safe', 'suggestive'], 
                 excludedTags: [
                         '734c7ec5-8489-46a4-8b5d-3eecd50c45cb',//hentai 
