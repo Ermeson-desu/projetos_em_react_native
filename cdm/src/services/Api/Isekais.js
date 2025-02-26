@@ -7,7 +7,7 @@ export const fetchIsekais = async () => {
         const response = await api.get('/manga', {
             params: { limit: 10, order:{ relevance: 'desc' },
                 availableTranslatedLanguage: ['pt-br'],
-                contentRating: ['safe', 'suggestive'], 
+                contentRating: ['safe'], 
                 includedTags: [
                     'ace04997-f6bd-436e-b261-779182193d3d'  // Isekai
                 ],

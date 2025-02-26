@@ -7,7 +7,7 @@ export const fetchRomance = async () => {
         const response = await api.get('/manga', {
             params: { limit: 10, order:{ relevance: 'desc' },
                 availableTranslatedLanguage: ['pt-br'],
-                contentRating: ['safe', 'suggestive'], 
+                contentRating: ['safe'], 
                 includedTags: [
                     '423e2eae-a7a2-4a8b-ac03-a8351462d71d', // Romance
                 ],

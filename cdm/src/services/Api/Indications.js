@@ -7,7 +7,7 @@ export const fetchIndications = async () => {
         const response = await api.get('/manga', {
             params: { limit: 10, order:{ relevance: 'desc' },
                 availableTranslatedLanguage: ['pt-br'],
-                contentRating: ['safe', 'suggestive'], 
+                contentRating: ['safe'], 
                 excludedTags: [
                         '734c7ec5-8489-46a4-8b5d-3eecd50c45cb',//hentai 
                         '97893a4c-12af-4dac-b6be-0c717c532b0d',// ecchi 

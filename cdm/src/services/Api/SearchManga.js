@@ -8,7 +8,7 @@ export const searchManga = async (query) => {
                 title: query, // Filtra pelo título do mangá
                 limit: 10, // Retorna apenas um resultado
                 availableTranslatedLanguage: ['pt-br'],
-                contentRating: ['safe', 'suggestive'], 
+                contentRating: ['safe'], 
                 excludedTags: [
                     '734c7ec5-8489-46a4-8b5d-3eecd50c45cb', // Hentai 
                     '97893a4c-12af-4dac-b6be-0c717c532b0d', // Ecchi 

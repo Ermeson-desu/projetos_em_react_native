@@ -30,7 +30,13 @@ export const Search = () => {
             <Backgroundfull>
                 <SearchBar onSearch={handleSearch} />
                 <SearchList contentContainerStyle={{ flexGrow: 1 }}>
-                    <MangaList data={search} height="54.7%" width={120} horizontal={false}/>
+                    <MangaList 
+                        data={search} 
+                        height="54.7%" 
+                        width={120} 
+                        horizontal={false}
+                        onPress={(mangaId)=> navigation.navigate('Page',{mangaId})}
+                        />
                 </SearchList>
             </Backgroundfull>
             <BottomBar navigation={navigation} />
