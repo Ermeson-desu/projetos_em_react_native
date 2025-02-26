@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { FlatList } from "react-native";
+import { FlatList} from "react-native";
 import { ListContainer,MangaContainer } from "./styles";
 import {PageManga, height_page,width_page} from '../../Molecules';
 import { fetchChapters,fetchPages} from "../../../services/Api/Chapter";
 import { useRoute } from "@react-navigation/native";
+import { Text , Loading} from "../../../components";
+
 
 
 /**
@@ -31,6 +33,8 @@ export const PageList = () =>{
         loadPages()
     }, [mangaId])
     
+    if (pages == null) return <Loading/>
+
     return(
         
         <ListContainer>

@@ -5,3 +5,4 @@ export * from './BottomBar';
 export * from './HomeList';
 export * from './PageList';
 export * from './SearchList';
+export * from './BottomBarPages'
