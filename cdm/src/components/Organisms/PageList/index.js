@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FlatList } from "react-native";
 import { ListContainer,MangaContainer } from "./styles";
-import {PageManga, height_page} from '../../Molecules';
-import {theme} from '../../../styles';
+import {PageManga, height_page,width_page} from '../../Molecules';
 import { fetchChapters,fetchPages} from "../../../services/Api/Chapter";
 import { useRoute } from "@react-navigation/native";
 
@@ -40,7 +39,7 @@ export const PageList = () =>{
             data={pages}
             keyExtractor={(item,index)=>`${item}-${index}`}
             renderItem={({item}) =>
-                    <MangaContainer height={height_page}>
+                    <MangaContainer height={height_page} width={width_page}>
                         <PageManga item={item}/>
                     </MangaContainer> 
                 }

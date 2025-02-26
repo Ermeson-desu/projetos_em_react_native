@@ -2,7 +2,6 @@ import styled from "styled-components/native";
 
 
 export const PageMangaStyle = styled.View`
-    
     display:flex;
     align-items:center;
     height:${({height,theme})=>theme.metrics.px(height)}px;
@@ -10,6 +9,7 @@ export const PageMangaStyle = styled.View`
 `;
 
 export const ImgStyle = styled.Image`
-    width: 100%;
-    height: 100%;
+    resize-mode: contain;
+    width: 205%;
+    height: 200%;
 `;
